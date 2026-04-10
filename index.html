@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>413730564 - Vue 練習作品集</title>
+    <style>
+        :root {
+            --sidebar-width: 300px;
+            --primary-color: #2c3e50;
+            --accent-color: #42b983;
+            --bg-color: #f8f9fa;
+            --text-color: #333;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            height: 100vh;
+            background-color: var(--bg-color);
+            overflow: hidden;
+        }
+
+        /* 側邊欄樣式 */
+        .sidebar {
+            width: var(--sidebar-width);
+            background-color: var(--primary-color);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+            z-index: 10;
+        }
+
+        .sidebar-header {
+            padding: 20px;
+            background-color: rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .sidebar-header h1 {
+            font-size: 1.2rem;
+            margin: 0;
+            margin-bottom: 5px;
+        }
+
+        .sidebar-header p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin: 0;
+        }
+
+        .nav-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            overflow-y: auto;
+            flex: 1;
+        }
+
+        .nav-list li {
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .nav-list a {
+            display: block;
+            padding: 15px 20px;
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: all 0.3s;
+            font-size: 0.95rem;
+        }
+
+        .nav-list a:hover {
+            background-color: rgba(255,255,255,0.1);
+            color: var(--accent-color);
+            padding-left: 25px;
+        }
+
+        /* 主內容區樣式 */
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <h1>Vue 練習目錄</h1>
+            <p>學號：413730564</p>
+        </div>
+        <ul class="nav-list">
+            <li><a href="ex1/index.html" target="contentFrame">練習 1: 第一個 Vue 頁面</a></li>
+            <li><a href="ex2/index.html" target="contentFrame">練習 2: 資料綁定</a></li>
+            <li><a href="ex3/index.html" target="contentFrame">練習 3: 方法與事件</a></li>
+            <li><a href="ex4/index.html" target="contentFrame">練習 4: v-model 雙向綁定</a></li>
+            <li><a href="ex5/index.html" target="contentFrame">練習 5: v-if 條件渲染</a></li>
+            <li><a href="ex6/index.html" target="contentFrame">練習 6: v-for 列表渲染</a></li>
+            <li><a href="ex7/index.html" target="contentFrame">練習 7: Computed 計算屬性</a></li>
+            <li><a href="ex8/index.html" target="contentFrame">練習 8: Class/Style 綁定</a></li>
+            <li><a href="ex9/index.html" target="contentFrame">練習 9: 綜合待辦清單</a></li>
+        </ul>
+    </aside>
+
+    <main class="main-content">
+        <iframe name="contentFrame" src="ex1/index.html"></iframe>
+    </main>
+</body>
+</html>
